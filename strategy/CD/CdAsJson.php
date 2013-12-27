@@ -1,6 +1,6 @@
 <?php
 
-class CDasJSONStrategy
+class CdAsJson
 {
     public function get(CDusesStrategy $cd) {
         $json = array();
