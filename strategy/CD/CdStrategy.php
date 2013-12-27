@@ -2,6 +2,8 @@
 //error_reporting(E_ALL);
 //ini_set('error_reporting', E_ALL);
 
+namespace strategy\CD;
+
 /*
  * The Strategy Design Pattern helps architect an object that can make use of 
  * algorithms in other objects on demand in lieu of containing the logic itself.

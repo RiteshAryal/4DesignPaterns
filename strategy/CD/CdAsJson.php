@@ -1,4 +1,5 @@
 <?php
+namespace strategy\CD;
 
 class CdAsJson
 {

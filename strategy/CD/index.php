@@ -1,13 +1,14 @@
 <?php
+use strategy\CD;
 
-//Autoload all classes from with /CD
+//Autoload all classes from within /CD
 function __autoload($class)  {
-    $fileName =  __DIR__ . str_replace('\\','/', $class) . '.php';
-    include ($fileName);   
+    $fileName =  __DIR__ . '/' . $class . '.php';
+    include $fileName;
 }
 
 //Actual Strategy Implementation
-$mycd = new CdStrategy('Chhekyoo Chhekyoo', 'Nepathya');
+$mycd = new CdStrategy('Engine Gadi Ma Ho Engine Gadima', 'Anil Singh');
 
 //xml output
 $mycd->setStrategry(new CdAsXML());

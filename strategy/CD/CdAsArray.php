@@ -1,5 +1,6 @@
 <?php
 
+namespace strategy\CD;
 
 class CdAsArray
 {
