@@ -3,8 +3,9 @@ namespace strategy\CD;
 
 class CdAsXML
 {
-    public function get(CDusesStrategy $cd) {
-        $doc = new DOMDocument();
+    public function get(\strategy\CD\CdStrategy $cd)
+    {
+        $doc = new \DOMDocument();
         $root = $doc->createElement('CD');
         $root = $doc->appendChild($root);
         $title = $doc->createElement('Title', $cd->getTitle());

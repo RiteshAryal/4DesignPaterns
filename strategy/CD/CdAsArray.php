@@ -1,10 +1,9 @@
 <?php
-
 namespace strategy\CD;
 
 class CdAsArray
 {
-    public function get(CDusesStrategy $cd)
+    public function get(\strategy\CD\CdStrategy $cd)
     {
         $cd = array(
             'CD' => array(

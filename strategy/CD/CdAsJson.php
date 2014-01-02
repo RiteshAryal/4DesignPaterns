@@ -3,7 +3,8 @@ namespace strategy\CD;
 
 class CdAsJson
 {
-    public function get(CDusesStrategy $cd) {
+    public function get(\strategy\CD\CdStrategy $cd)
+    {
         $json = array();
         $json['CD']['title'] = $cd->getTitle();
         $json['CD']['band'] = $cd->getBand();
