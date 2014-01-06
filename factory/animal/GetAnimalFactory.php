@@ -15,9 +15,6 @@
  * 
  * 
  */
-use factory\animal\animals\Cat;
-use factory\animal\animals\Dog;
-use factory\animal\animals\Rat;
 
 namespace factory\animal;
 
