@@ -25,8 +25,7 @@ function __autoload($class) {
   //var_dump(file_exists($file));
   if (!file_exists($file)) {
     return false;
-  }
-  else {
+  } else {
     require $file;
     return true;
   }
