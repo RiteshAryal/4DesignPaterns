@@ -8,7 +8,9 @@ include_once 'GetLandAnimalFactory.php';
 include_once 'GetSeaAnimalFactory.php';
 /**
  * Abstract Factory Design Pattern
- * ie. Factory of Factory
+ * Factory of Factory (super-factory) is also extension to Factory Pattern
+ * Creational Pattern > Abstract Factory 
+ * 
  * 
  * ie. centralized place to create objects of object
  * @category   Abstract Factory Pattern
