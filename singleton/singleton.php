@@ -9,6 +9,9 @@
  * 1. private static member
  * 2. private constructor (ie. outside class cannot instantiate)
  * 3. static public method to return singleton object
+ * 
+ * GOF says: Insure the class has only one instance and provide a global point of access to it.
+ * Basically, Abstract Factory, Builder and Prototype can use Singleton in their implementation.
  */
 
 class singleton
