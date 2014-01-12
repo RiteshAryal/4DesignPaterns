@@ -2,6 +2,9 @@
 
 namespace abstrafactory\animal;
 
+include_once 'animals/Whale.php';
+include_once 'animals/Fish.php';
+
 class GetSeaAnimalFactory extends AnimalFactory
 {
     private $_availableAnimal = array('whale', 'fish');

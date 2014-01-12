@@ -1,8 +1,11 @@
 <?php
 
 namespace abstrafactory\animal;
+use abstrafactory\animal\GetLandAnimalFactory;
+use abstrafactory\animal\GetSeaAnimalFactory;
 
-
+include_once 'GetLandAnimalFactory.php';
+include_once 'GetSeaAnimalFactory.php';
 /**
  * Abstract Factory Design Pattern
  * ie. Factory of Factory
@@ -17,9 +20,7 @@ namespace abstrafactory\animal;
  */
 
 abstract class AnimalFactory
-{
-    private $_availableType = array('land', 'sea');
-    
+{    
     abstract public function getAnimal($type);
     
     /**
@@ -28,7 +29,7 @@ abstract class AnimalFactory
      */
     public static function getAnimalFactory($type)
     {
-        if (!in_array($type, $this->_availableType)) {
+        if (!in_array($type, array('land', 'sea'))) {
             throw new \Exception('Animal Type not found');
         }
         switch ($type)
