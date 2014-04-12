@@ -1,7 +1,5 @@
 <?php
 
-use factory\animal\GetAnimalFactory;
-
 //Autoload all classes from within /CD
 function __autoload($class) {
   $file = __DIR__ . '/../../' . str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
@@ -15,7 +13,7 @@ function __autoload($class) {
   }
 }
 
-$animal = new GetAnimalFactory();
+$animal = new \PhpDesignPattern\factory\animal\GetAnimalFactory();
 $cat = $animal->getAnimal('cat');
 echo "Cat speaks: " . $cat->speak() . "\n";
 

@@ -16,7 +16,7 @@
  * 
  */
 
-namespace factory\animal;
+namespace PhpDesignPattern\factory\animal;
 
 class GetAnimalFactory
 {
@@ -36,13 +36,13 @@ class GetAnimalFactory
         switch ($type)
         {
             case 'cat':
-                return new \factory\animal\animals\Cat();
+                return new \PhpDesignPattern\factory\animal\animals\Cat();
                 break;
             case 'dog':
-                return new \factory\animal\animals\Dog();
+                return new \PhpDesignPattern\factory\animal\animals\Dog();
                 break;
             case 'rat':
-                return new \factory\animal\animals\Rat();
+                return new \PhpDesignPattern\factory\animal\animals\Rat();
                 break;
         }
     }

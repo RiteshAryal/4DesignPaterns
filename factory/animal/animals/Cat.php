@@ -1,5 +1,5 @@
 <?php
-namespace factory\animal\animals;
+namespace PhpDesignPattern\factory\animal\animals;
 
 class Cat implements Ianimal
 {

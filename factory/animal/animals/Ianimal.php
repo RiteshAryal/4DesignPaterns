@@ -1,6 +1,6 @@
 <?php
 
-namespace factory\animal\animals;
+namespace PhpDesignPattern\factory\animal\animals;
 
 interface Ianimal
 {
