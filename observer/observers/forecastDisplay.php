@@ -6,7 +6,7 @@ use observer\observers\displayElementInterface;
 use observer\observers\observerInterface;
 use observer\subject\weatherData;
 
-class weatherDisplay implements displayElementInterface, observerInterface
+class forecastDisplay implements displayElementInterface, observerInterface
 {
     private $temperature;
     private $humidity;
@@ -30,7 +30,7 @@ class weatherDisplay implements displayElementInterface, observerInterface
     public function display()
     {
         echo "<hr/>";
-        echo "Current conditions: " . $this->temperature .
+        echo "Forecast Display: " . $this->temperature .
                 " F degrees, Humidity: " . $this->humidity .
                 "% and Pressure: " . $this->pressure;
     }
