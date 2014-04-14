@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * The Decorator Pattern attaches additional responsibilities to an object
+ * dynamically. Decorators provide a flexible alternative to subclassing for 
+ * extening functionality.
+ * 
+ */
 function __autoload($class)
 {
     $parts = explode('\\', $class);
