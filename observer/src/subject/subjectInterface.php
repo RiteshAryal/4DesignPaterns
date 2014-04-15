@@ -1,8 +1,8 @@
 <?php
 
-namespace observer\subject;
+namespace subject;
 
-use observer\observers\observerInterface;
+use observers\observerInterface;
 
 interface subjectInterface
 {

@@ -11,11 +11,16 @@
  * - We can push or pull data from the Observable when using the patterns (pull is always better)
  * - Remember, loosely coupled designs are mch more flexible and resilient to changes.
  */
-namespace observer;
-use observer\observers\currentCondition;
-use observer\observers\statisticsDisplay;
-use observer\observers\forecastDisplay;
-use observer\subject\weatherData;
+
+function __autoload($class) {
+    $fileName =  __DIR__ . '/src/' . str_replace('\\','/', $class) . '.php';
+    include ($fileName);   
+}
+
+use observers\currentCondition;
+use observers\statisticsDisplay;
+use observers\forecastDisplay;
+use subject\weatherData;
 
 //subject
 $weatherData = new weatherData();

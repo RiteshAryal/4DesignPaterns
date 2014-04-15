@@ -1,9 +1,9 @@
 <?php
 
-namespace observer\subject;
+namespace subject;
 
-use observer\observers\observerInterface;
-use observer\subject\subjectInterface;
+use observers\observerInterface;
+use subject\subjectInterface;
 
 class weatherData implements subjectInterface
 {

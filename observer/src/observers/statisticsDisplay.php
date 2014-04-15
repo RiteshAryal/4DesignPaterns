@@ -1,10 +1,10 @@
 <?php
 
-namespace observer\observers;
+namespace observers;
 
-use observer\observers\displayElementInterface;
-use observer\observers\observerInterface;
-use observer\subject\weatherData;
+use observers\displayElementInterface;
+use observers\observerInterface;
+use subject\weatherData;
 
 class statisticsDisplay implements displayElementInterface, observerInterface
 {
