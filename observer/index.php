@@ -12,27 +12,28 @@
  * - Remember, loosely coupled designs are mch more flexible and resilient to changes.
  */
 
-function __autoload($class) {
-    $fileName =  __DIR__ . '/src/' . str_replace('\\','/', $class) . '.php';
-    include ($fileName);   
+function __autoload($class)
+{
+    $fileName =  __DIR__ . '/src/' . str_replace('\\', '/', $class) . '.php';
+    include ($fileName);
 }
 
-use observers\currentCondition;
-use observers\statisticsDisplay;
-use observers\forecastDisplay;
-use subject\weatherData;
+use observers\CurrentCondition;
+use observers\StatisticsDisplay;
+use observers\ForecastDisplay;
+use subject\WeatherData;
 
 //subject
-$weatherData = new weatherData();
+$weatherData = new WeatherData();
 
 //observer 1
-$currentCondition = new currentCondition($weatherData);
-$currentCondition->setMeasurements(22, 88, 10.12);
-
+$currentCondition = new CurrentCondition($weatherData);
 //observer 2
-$statisticsDisplay = new statisticsDisplay($weatherData);
-$statisticsDisplay->setMeasurements(33, 77, 12.02);
-
+$statisticsDisplay = new StatisticsDisplay($weatherData);
 //observer 3
-$forecastDisplay = new statisticsDisplay($weatherData);
-$forecastDisplay->setMeasurements(11, 98, 09.09);
+$forecastDisplay = new ForecastDisplay($weatherData);
+
+//Subject's state changes here. And finally Sobject will notify all the registered Observers
+$weatherData->setMeasurements(33, 77, 12.02);
+
+echo "\n";
