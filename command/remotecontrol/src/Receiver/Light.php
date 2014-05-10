@@ -1,6 +1,12 @@
 <?php
 namespace Receiver;
 
+/**
+ * ...which results in the actions being invoked on the Receiver.
+ *
+ * Class Light
+ * @package Receiver
+ */
 class Light
 {
     public function on()
