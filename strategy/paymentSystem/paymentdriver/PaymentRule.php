@@ -1,8 +1,7 @@
 <?php
-//error_reporting(E_ALL);
-//ini_set('error_reporting', E_ALL);
+namespace strategy\paymentSystem\paymentdriver;
 
-interface paymentstrategy
+interface PaymentRule
 {
     public function pay($amount=0);
 }

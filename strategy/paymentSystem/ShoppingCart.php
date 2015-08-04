@@ -1,7 +1,9 @@
 <?php
-require_once 'paymentdriver/PayByCreditCard.php';
-require_once 'paymentdriver/PayByPaypal.php';
-require_once 'paymentdriver/PaymentRule.php';
+namespace strategy\paymentSystem;
+
+use strategy\paymentSystem\paymentdriver\PayByCreditCard;
+use strategy\paymentSystem\paymentdriver\PayByPaypal;
+use strategy\paymentSystem\CustomerInfo;
 
 class ShoppingCart
 {
@@ -15,7 +17,7 @@ class ShoppingCart
         $this->amount = $amt;
     }
 
-    public function setCustomer($customer)
+    public function setCustomer(CustomerInfo $customer)
     {
         if (!empty($customer)) {
             $this->customer = $customer;
@@ -44,8 +46,6 @@ class ShoppingCart
 
         return $this;
     }
-
-
 
     public function pay($amt = 0)
     {

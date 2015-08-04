@@ -1,18 +1,18 @@
 <?php
+namespace strategy\paymentSystem\paymentdriver;
 
-require_once 'PaymentRule.php';
-require_once 'CustomerInfo.php';
+use strategy\paymentSystem\CustomerInfo;
 
-class PayByPaypal implements paymentstrategy
+class PayByPaypal implements PaymentRule
 {
     private $customer;
-    public function __construct($customer)
+    public function __construct(CustomerInfo $customer)
     {
         $this->customer = $customer;
     }
 
     public function pay($amount=0)
     {
-        echo '<br/>paying ' . $amount . ' by Paypal using email ' . $this->customer->getEmail();
+        echo ' -paying ' . $amount . ' by Paypal using email ' . $this->customer->getEmail() . '- ';
     }
 }

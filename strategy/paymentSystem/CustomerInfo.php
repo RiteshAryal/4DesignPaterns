@@ -1,6 +1,7 @@
 <?php
+namespace strategy\paymentSystem;
 
-class Customer
+class CustomerInfo
 {
     private $name;
     private $email;

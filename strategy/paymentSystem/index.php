@@ -1,20 +1,30 @@
 <?php
 
-//namespace strategy\paymentSystem;
+use \strategy\paymentSystem\ShoppingCart;
+use \strategy\paymentSystem\CustomerInfo;
 
-include_once 'ShoppingCart.php';
-include_once 'CustomerInfo.php';
+function __autoload($class)
+{
+    $parts = explode('\\', $class);
+
+    if (!file_exists(end($parts) . '.php')) {
+        require $parts[2] . '\\' . end($parts) . '.php';
+    } else {
+        require end($parts) . '.php';
+    }
+
+}
 
 $cart = 1200;
 $shopping = new ShoppingCart();
 $shopping
-    ->setCustomer( new Customer(
+    ->setCustomer( new CustomerInfo(
         'Ritesh',
-        'ritesh@myemail.com',
+        'riteshrajaryal@hotmail.com',
         [
-            '123-456-7890',
+            '0798-0123-4560-7890',
             '12/17',
-            '345'
+            '876'
         ]
     ))
     ->setPaymentDriver($cart)
