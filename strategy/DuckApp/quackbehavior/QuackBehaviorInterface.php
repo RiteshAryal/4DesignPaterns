@@ -1,5 +1,4 @@
 <?php
-
 namespace strategy\DuckApp\quackbehavior;
 
 interface QuackBehaviorInterface
