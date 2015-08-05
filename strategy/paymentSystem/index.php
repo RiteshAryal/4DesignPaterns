@@ -15,21 +15,26 @@ function __autoload($class)
 
 }
 
-$cart = 1200;
-$shopping = new ShoppingCart();
-$shopping
+$shoppingCC = new ShoppingCart();
+$shoppingCC
     ->setCustomer( new CustomerInfo(
         'Ritesh',
-        'riteshrajaryal@hotmail.com',
+        '',
         [
             '0798-0123-4560-7890',
             '12/17',
             '876'
         ]
     ))
-    ->setPaymentDriver($cart)
-    ->pay()
-
-    ->setPaymentDriver($cart-700)
+    ->setPaymentDriver(1245)
     ->pay();
 
+$shoppingPP = new ShoppingCart();
+$shoppingPP
+    ->setCustomer( new CustomerInfo(
+        'Ritesh',
+        'riteshrajaryal@hotmail.com',
+        []
+    ))
+    ->setPaymentDriver(200)
+    ->pay();

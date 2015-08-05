@@ -13,6 +13,6 @@ class PayByCreditCard implements PaymentRule
 
     public function pay($amount=0)
     {
-        echo ' -paying ' . $amount . ' using Credit Card by ' . $this->customer->getName() . ' using crediential ' . implode(', ', $this->customer->getBankInfo())  . '- ';
+        echo "\n" . 'Paying ' . $amount . ' using Credit Card by ' . $this->customer->getName() . ' using crediential ' . implode(', ', $this->customer->getBankInfo())  .  "\n";
     }
 }

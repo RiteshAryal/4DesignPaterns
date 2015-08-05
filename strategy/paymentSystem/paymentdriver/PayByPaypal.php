@@ -13,6 +13,6 @@ class PayByPaypal implements PaymentRule
 
     public function pay($amount=0)
     {
-        echo ' -paying ' . $amount . ' by Paypal using email ' . $this->customer->getEmail() . '- ';
+        echo  "\n" . 'Paying ' . $amount . ' by Paypal using email ' . $this->customer->getEmail() .  "\n";
     }
 }
