@@ -1,6 +1,4 @@
 <?php
-include 'MallardDuck.php';
-
 use strategy\DuckApp\flybehavior\FlyWithWings;
 use strategy\DuckApp\quackbehavior\Quack;
 use strategy\DuckApp\MallardDuck;
