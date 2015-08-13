@@ -7,8 +7,8 @@
  */
 include_once 'Singleton.php';
 
-$single = singleton::getInstance();
-$douple = singleton::getInstance();
+$single = singleton::getInstance(); //creates for the first time
+$douple = singleton::getInstance();  //still returns the object created before
 
 echo '<pre>';
 print_r($single);

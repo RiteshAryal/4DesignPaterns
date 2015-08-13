@@ -39,3 +39,6 @@ echo "\n";
 $gbm->insertQuarter();
 $gbm->insertQuarter();
 echo $gbm;
+
+//we can also add any other sequence of action
+//etc...etc...etc
